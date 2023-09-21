@@ -1,6 +1,6 @@
-[submodule "Model-SL-Cloud"]
-	path = Model-SL-Cloud
-	url = https://github.com/AIerLab/Model-SL-Cloud.git
-[submodule "Model-SL-Local"]
-	path = Model-SL-Local
-	url = https://github.com/AIerLab/Model-SL-Local.git
+[submodule "model-sl-cloud"]
+	path = model-sl-cloud
+	url = https://github.com/AIerLab/model-sl-cloud.git
+[submodule "model-sl-local"]
+	path = model-sl-local
+	url = https://github.com/AIerLab/model-sl-local.git
