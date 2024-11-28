@@ -1,21 +1,24 @@
-# Model-SL Project
+# Model-SL Project: Adaptive Split Learning with Localized Encryption and Decryption Models
 
-**Model-SL** (Split Learning) is a research and development project focusing on implementing **Split Learning with Encryption** to enhance data security while leveraging **user history** for improved model performance. The project aims to address privacy concerns in collaborative machine learning by securely partitioning the learning process across multiple entities.
+**Model-SL** is an innovative project that implements **Split Learning** with **adaptive encryption and decryption models**. These models are parameterized and run locally on user devices, leveraging **user history data** to train and fine-tune their parameters, enabling personalized and robust encryption-decryption mechanisms. This ensures data security and privacy while enhancing collaborative learning capabilities.
+
+**⚠️ Note: This project is under active construction. Expect frequent updates and experimental features.**
 
 ---
 
 ## Features
 
-- **Split Learning**: Implements a partitioned neural network architecture where training is distributed between client and server without sharing raw data.
-- **Encryption**: Adds robust encryption mechanisms to protect intermediate data exchanges.
-- **User History Integration**: Leverages historical user data securely to improve model predictions and personalization.
-- **Flexible Execution**: Supports both cloud-based and local execution.
+- **Localized Encryption and Decryption Models**: Each user has locally parameterized encryption and decryption models, ensuring data never leaves their device unencrypted.
+- **User History-Driven Training**: User history data is securely used to train and adapt the encryption and decryption models for personalized performance.
+- **Split Learning**: The neural network is partitioned between the user and server, minimizing the exposure of sensitive data.
+- **Privacy-Preserving Architecture**: The design ensures that raw user data remains secure and never directly shared with the server.
+- **Modular Design**: Future-ready for adding new features and extending encryption mechanisms.
 
 ---
 
 ## Installation
 
-To get started, clone this repository along with its submodules:
+To get started, clone the repository with submodules:
 
 ```bash
 git clone --recurse-submodules https://github.com/AIerLab/model-sl.git
@@ -27,7 +30,7 @@ git clone --recurse-submodules https://github.com/AIerLab/model-sl.git
 
 ### Cloud Execution
 
-For cloud-based execution, run:
+For deploying in a cloud environment:
 
 ```bash
 bash run_cloud.sh
@@ -35,7 +38,7 @@ bash run_cloud.sh
 
 ### Local Execution
 
-For local execution, run:
+For testing locally on your machine:
 
 ```bash
 bash run_local.sh
@@ -43,31 +46,54 @@ bash run_local.sh
 
 ---
 
+## Current Workflow (Under Construction)
+
+1. **Data Partitioning**:
+   - User data is retained locally, and only encrypted representations are shared with the server.
+   
+2. **Training Local Models**:
+   - **Encryption Model**: Trains on user history to generate secure representations of intermediate outputs.
+   - **Decryption Model**: Trains in tandem to decode the encrypted data on the server side.
+
+3. **Split Learning Integration**:
+   - The encrypted intermediate data is transmitted to the server for further processing, while local models adapt based on user-specific requirements.
+
+4. **Continuous Learning**:
+   - User models evolve by leveraging historical data, enhancing encryption robustness over time.
+
+---
+
 ## Folder Structure
 
-- **`/model-sl/`**: Main repository containing the core codebase for split learning.
-- **`/submodules/`**: Includes necessary submodules for encryption, user history management, and utility scripts.
-- **`run_cloud.sh`**: Script for deploying and running the project on a cloud environment.
-- **`run_local.sh`**: Script for running the project locally.
+- **`/model-sl/`**: Main repository containing the split learning implementation.
+- **`/submodules/`**: Includes experimental modules for encryption and decryption.
+- **`/user-history/`**: Placeholder for user history data (ensure compliance with privacy standards).
+- **`run_cloud.sh`**: Script for cloud execution.
+- **`run_local.sh`**: Script for local execution.
 
 ---
 
-## Prerequisites
+## Development Status
 
-- Python 3.8+
-- Required libraries (install via `requirements.txt` if applicable)
-- Access to cloud services (e.g., AWS, Azure, or GCP) for cloud execution
-- Supported Linux environment for local execution
+### Current Focus
+- Implementing basic encryption and decryption models.
+- Establishing secure communication protocols.
+- Testing integration of user-specific data with model parameterization.
+
+### Future Goals
+- Fine-tuning encryption-decryption models using federated learning techniques.
+- Enhancing performance through model optimization and hyperparameter tuning.
+- Expanding support for additional use cases and datasets.
 
 ---
 
-## Contributing
+## Contribution
 
-We welcome contributions to the **Model-SL Project**! To contribute:
+As the project is still in its early stages, contributions are welcome! 
 
 1. Fork the repository.
 2. Create a feature branch: `git checkout -b feature-name`.
-3. Commit your changes: `git commit -m 'Add a new feature'`.
+3. Commit your changes: `git commit -m 'Add new feature'`.
 4. Push the branch: `git push origin feature-name`.
 5. Open a pull request on GitHub.
 
@@ -75,10 +101,14 @@ We welcome contributions to the **Model-SL Project**! To contribute:
 
 ## License
 
-This project is licensed under the **MIT License**. See the `LICENSE` file for details.
+This project is licensed under the **MIT License**. See the `LICENSE` file for more details.
 
 ---
 
-## Support
+## Support and Feedback
 
-For issues and discussions, visit the [GitHub Issues](https://github.com/AIerLab/model-sl/issues) section or contact the team at **support@aierlab.com**.
+For questions, feature requests, or bug reports, please reach out via [GitHub Issues](https://github.com/AIerLab/model-sl/issues) or email us at **support@aierlab.com**.
+
+---
+
+**Stay tuned as we build the future of adaptive, secure split learning!**
